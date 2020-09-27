@@ -1,10 +1,12 @@
 <script lang="ts">
 import { onMount } from 'svelte';
+import * as utils from './canvas2dutils';
 
-let canvas;
-let mounted = false;
 
-export let top = 0;
+let canvas:  HTMLCanvasElement;
+let mounted: boolean = false;
+
+export let top: number = 0;
 
 onMount(() => {
 
@@ -16,16 +18,12 @@ onMount(() => {
 
 function onResize()
 {
-  const context = canvas.getContext('2d');
-  const PIXEL_RATIO = window.devicePixelRatio;
-  canvas.width = canvas.offsetWidth * PIXEL_RATIO;
-  canvas.height = canvas.offsetHeight * PIXEL_RATIO;
-  context.setTransform(PIXEL_RATIO, 0, 0, PIXEL_RATIO, 0, 0);
-
-  context.fillStyle = '#ff0000';
-  context.beginPath();
-  context.arc(250,top+250,120,0, Math.PI*2.0);
-  context.fill();
+  utils.onCanvasResize(canvas,(context: CanvasRenderingContext2d) => {
+    context.fillStyle = '#ff0000';
+    context.beginPath();
+    context.arc(250,top+250,120,0, Math.PI*2.0);
+    context.fill();
+  });
 }
 
 function loadCanvasElements() {
