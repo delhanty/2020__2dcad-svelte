@@ -23,9 +23,32 @@ function hinomaru(context: CanvasRenderingContext2d, x: number, y: number, radiu
   context.arc(x,y, radius, 0,Math.PI*2.0);
   context.fill();
 }
+function grid(context: CanvasRenderingContext2d, spacing: number)
+{
+  const x0 = 0.5;
+  const x1 = canvas.width;
+  const y0 = top + 0.5;
+  const y1 = canvas.height;
+
+  context.beginPath();
+
+  for (var x = x0; x < x1; x += spacing) {
+    context.moveTo(x, y0);
+    context.lineTo(x, y1);
+    }
+
+  for (var y = y0; y < y1; y += spacing) {
+    context.moveTo(x0, y);
+    context.lineTo(x1, y);
+    }
+
+  context.strokeStyle = "blue"; //"rgb(0.8,0.8,0.8)"; //#888; //"black";
+  context.stroke();
+}
 function onResize()
 {
   utils.onCanvasResize(canvas,(context: CanvasRenderingContext2d) => {
+    grid(context,40);
     hinomaru(context,250,top+100,120);
   });
 }
