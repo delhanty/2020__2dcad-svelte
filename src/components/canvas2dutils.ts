@@ -6,11 +6,13 @@ function onCanvasResize(
     canvas:        HTMLCanvasElement,
     drawToContext: CallbackToContext2d)
 {
-  const context: CanvasRenderingContext2D = canvas.getContext('2d');
-  const PIXEL_RATIO = window.devicePixelRatio;
-  canvas.width = canvas.offsetWidth * PIXEL_RATIO;
-  canvas.height = canvas.offsetHeight * PIXEL_RATIO;
-  context.setTransform(PIXEL_RATIO, 0, 0, PIXEL_RATIO, 0, 0);
+  const context: CanvasRenderingContext2D | null = canvas.getContext('2d');
+  if (context != null) {
+    const PIXEL_RATIO = window.devicePixelRatio;
+    canvas.width      = canvas.offsetWidth * PIXEL_RATIO;
+    canvas.height     = canvas.offsetHeight * PIXEL_RATIO;
+    context.setTransform(PIXEL_RATIO, 0, 0, PIXEL_RATIO, 0, 0);
 
-  drawToContext(context);
+    drawToContext(context);
+  }
 }
