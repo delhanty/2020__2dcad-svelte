@@ -16,13 +16,17 @@ onMount(() => {
     }
 });
 
+function hinomaru(context: CanvasRenderingContext2d, x: number, y: number, radius: number)
+{
+  context.fillStyle = '#ff0000';
+  context.beginPath();
+  context.arc(x,y, radius, 0,Math.PI*2.0);
+  context.fill();
+}
 function onResize()
 {
   utils.onCanvasResize(canvas,(context: CanvasRenderingContext2d) => {
-    context.fillStyle = '#ff0000';
-    context.beginPath();
-    context.arc(250,top+100,120,0, Math.PI*2.0);
-    context.fill();
+    hinomaru(context,250,top+100,120);
   });
 }
 
