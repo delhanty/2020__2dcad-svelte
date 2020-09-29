@@ -41,8 +41,9 @@
 
 #navbar {
   position: absolute;
-  /*background-color: #f8f8f8;*/
-  background: transparent;
+  width: 100%;
+  background-color: #f8f8f8;
+  /*background: transparent;*/
   opacity: 0.8;
   -moz-opacity: 0.8;
   min-height: 40px;

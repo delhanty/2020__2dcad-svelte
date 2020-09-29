@@ -21,7 +21,7 @@ function onResize()
   utils.onCanvasResize(canvas,(context: CanvasRenderingContext2d) => {
     context.fillStyle = '#ff0000';
     context.beginPath();
-    context.arc(250,top+250,120,0, Math.PI*2.0);
+    context.arc(250,top+100,120,0, Math.PI*2.0);
     context.fill();
   });
 }
