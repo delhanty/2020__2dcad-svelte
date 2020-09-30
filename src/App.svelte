@@ -1,7 +1,16 @@
 <script lang="ts">
   import Canvas2d from "./components/Canvas2d.svelte";
   let navbarheight = 40;
+
+  /* Strings to localise*/
+  let title      = "2D CAD in Svelte";
+  let logo_left  = "2D CAD ";
+  let logo_right = " (Svelte)";
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+</svelte:head>
 
 <main>
   <div id="canvas-container">
@@ -9,7 +18,7 @@
   </div>
   <div id="canvas-overlay">
   <div id="navbar">
-    <div id="navbar-logo"><span id="navbar-logo-left">2D-CAD </span><span id="navbar-logo-right"> (Svelte)</span></div>
+    <div id="navbar-logo"><span id="navbar-logo-left">{logo_left}</span><span id="navbar-logo-right">{logo_right}</span></div>
     <div id="errordiv" style="display: none;"><pre></pre></div>
   </div>
 </main>
