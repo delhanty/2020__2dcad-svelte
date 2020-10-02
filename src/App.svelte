@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Canvas2d from "./components/Canvas2d.svelte";
+  import Canvas2D from "./components/Canvas2D.svelte";
   let navbarheight = 40;
 
   /* Strings to localise*/
@@ -14,7 +14,7 @@
 
 <main>
   <div id="canvas-container">
-    <Canvas2d top={navbarheight}/>
+    <Canvas2D top={navbarheight}/>
   </div>
   <div id="canvas-overlay">
   <div id="navbar">
