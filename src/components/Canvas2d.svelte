@@ -16,14 +16,14 @@ onMount(() => {
     }
 });
 
-function hinomaru(context: CanvasRenderingContext2d, x: number, y: number, radius: number)
+function hinomaru(context: CanvasRenderingContext2D, x: number, y: number, radius: number)
 {
   context.fillStyle = '#ff0000';
   context.beginPath();
   context.arc(x,y, radius, 0,Math.PI*2.0);
   context.fill();
 }
-function grid(context: CanvasRenderingContext2d, spacing: number)
+function grid(context: CanvasRenderingContext2D, spacing: number)
 {
   const x0 = 0.5;
   const x1 = canvas.width;
@@ -47,7 +47,7 @@ function grid(context: CanvasRenderingContext2d, spacing: number)
 }
 function onResize()
 {
-  utils.onCanvasResize(canvas,(context: CanvasRenderingContext2d) => {
+  utils.onCanvasResize(canvas,(context: CanvasRenderingContext2D) => {
     grid(context,40);
     hinomaru(context,250,top+100,120);
   });

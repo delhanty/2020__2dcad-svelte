@@ -1,10 +1,10 @@
 export { onCanvasResize}
 
-type CallbackToContext2d = (context2d: CanvasRenderingContext2d) => void;
+type CallbackToContext2D = (context2d: CanvasRenderingContext2D) => void;
 
 function onCanvasResize(
     canvas:        HTMLCanvasElement,
-    drawToContext: CallbackToContext2d)
+    drawToContext: CallbackToContext2D)
 {
   const context: CanvasRenderingContext2D | null = canvas.getContext('2d');
   if (context != null) {
