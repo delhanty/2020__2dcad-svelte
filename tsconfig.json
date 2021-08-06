@@ -19,31 +19,17 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
 
-
     /* Extra to Svelte base tsconfig.json */
 
+    "types": ["node", "svelte"],
 
-    "types": [
-        "node",
-        "svelte",
-    ],
-
-    "lib": [
-        "DOM",
-        "ES2017",
-        "WebWorker",
-      ],
-
+    "lib": ["DOM", "ES2017", "WebWorker"],
 
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    },
+    "experimentalDecorators": true
+  },
 
-  "include": [
-    "src/**/*",
-    ],
-  "exclude": [
-    "public/*",
-    ],
-  }
+  "include": ["src/**/*"],
+  "exclude": ["public/*"]
+}

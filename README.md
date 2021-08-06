@@ -1,10 +1,10 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+_Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)_
 
 ---
 
 # 2D CAD in Svelte
 
-This is a starter project for a [Svelte](https://svelte.dev) based 2D CAD web app.  It is implemented in Typescript.
+This is a starter project for a [Svelte](https://svelte.dev) based 2D CAD web app. It is implemented in Typescript.
 
 ## Get started
 
@@ -37,12 +37,11 @@ pnpm run build
 
 You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
 
-
 ## Single-page app mode
 
 By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
 
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
+If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for _any_ path. You can make it so by editing the `"start"` command in package.json:
 
 ```js
 "start": "sirv public --single"
