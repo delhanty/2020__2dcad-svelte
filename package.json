@@ -8,6 +8,7 @@
   "private": true,
   "description": "2D CAD GUI implented in Svelte",
   "scripts": {
+    "clean": "rimraf public/build",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
+    "rimraf": "^3.0.2",
     "rollup": "^2.56.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.5",
