@@ -1,3 +1,8 @@
+// Silence warning from EsLint because
+// we will likely export multiple items
+// from this file in future.
+/* eslint-disable import/prefer-default-export */
+
 export { onCanvasResize };
 
 type CallbackToContext2D = (context2d: CanvasRenderingContext2D) => void;
