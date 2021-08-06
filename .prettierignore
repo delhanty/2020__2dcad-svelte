@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+public/build
+*.local
+.pnpm-debug.log
+.vscode/extensions.json
+.svelte
+pnpm-lock.yaml
