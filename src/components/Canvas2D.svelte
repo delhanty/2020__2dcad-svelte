@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import * as utils from '../typescript/canvas2Dutils.ts';
+  import * as utils from '../typescript/canvas2Dutils';
 
   let canvas: HTMLCanvasElement;
   let mounted: boolean = false;
